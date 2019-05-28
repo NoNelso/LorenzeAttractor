@@ -1,20 +1,21 @@
 function setup() {
   createCanvas(600, 500);
   background(0);
-  float x y, z, a, b, c;
-  float dx, dy, dz, dt;
-  x = y = z = 0;
-  a = 10;
-  b = 28;
-  c = 8.0 / 3.0;
-  dt = 1;
+  let x = 0.0;
+  let y = 0.0;
+  let z = 0.0;
+  let a = 10.0;
+  let b = 28;
+  let c = 8.0 / 3.0;
+  let dx, dy, dz, dt;
 }
 
 function draw() {
+  dt = 0.01;
   dx = a * (y - x);
-  x += (dx * dt);
+  x = x + (dx * dt);
   dy = x * (b - z) - y;
-  y += (dy * dt);
+  y = y + (dy * dt);
   dz = x * y - c * z;
-  z += (dz * dt);
+  z = y + (dz * dt);
 }
