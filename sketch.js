@@ -19,3 +19,4 @@ function draw() {
   dz = x * y - c * z;
   z = y + (dz * dt);
 }
+argh
